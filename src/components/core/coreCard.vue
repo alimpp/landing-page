@@ -1,5 +1,8 @@
 <template>
-  <div class="core-card core-card-ligt">
+  <div
+    class="core-card"
+    :class="watchMode === 'dark' ? 'core-card-dark' : 'core-card-light'"
+  >
     <img :src="image" alt="image" />
     <span>{{ title }}</span>
     <p>{{ description }}</p>
@@ -15,6 +18,11 @@
 
 <script>
 export default {
+  computed: {
+    watchMode() {
+      return this.$store.getters["theme/watchMode"];
+    },
+  },
   props: {
     image: {
       type: String,
@@ -63,7 +71,19 @@ export default {
     padding: 2px 10px;
   }
 }
-.core-card-ligt {
+.core-card-light {
   background: var(--app-card-in-light-mode);
+}
+.core-card-dark {
+  background: var(--app-card-in-dark-mode);
+  span {
+    color: var(--app-light);
+  }
+  p {
+    color: var(--app-light);
+  }
+//   i {
+//     color: var(--app-light);
+//   }
 }
 </style>

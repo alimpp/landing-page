@@ -94,8 +94,6 @@ export default {
     }
   }
 }
-.section-two {
-}
 @media (max-width: 1000px) {
   .section-one {
     flex-direction: column;
