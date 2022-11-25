@@ -27,7 +27,6 @@ export default {
 @import "@/assets/scss/variables/size.scss";
 .app {
   width: 100%;
-  height: 100vh;
   .mobile_nav{
     display: none;
   }

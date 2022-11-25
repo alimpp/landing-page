@@ -1,10 +1,13 @@
 <template>
-  <div class="home-page">
+  <div class="home-page application_animation">
     <div class="section-one">
       <div class="section-one-text-container">
         <span>Landing Page Present Now</span>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus praesentium doloremque rerum, aspernatur vero tempore tenetur architecto nisi quos animi facere blanditiis quis sequi, cupiditate deleniti nihil ipsum debitis ullam?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+          praesentium doloremque rerum, aspernatur vero tempore tenetur
+          architecto nisi quos animi facere blanditiis quis sequi, cupiditate
+          deleniti nihil ipsum debitis ullam?
         </p>
         <div>
           <button class="btn btn-primary">Get Started</button>
@@ -16,48 +19,90 @@
         />
       </div>
     </div>
+    <div class="section-two d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-lg-4" v-for="item in itemsCard" :key="item.id">
+          <coreCard
+            :image="item.image"
+            :title="item.title"
+            :description="item.description"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+import coreCard from "@/components/core/coreCard";
+export default {
+  components: { coreCard },
+  data() {
+    return {
+      itemsCard: [
+        {
+          image:
+            "https://static.vecteezy.com/system/resources/previews/007/792/440/large_2x/big-ben-london-the-uk-at-sunset-retro-street-lamp-light-on-westminster-bridge-black-and-white-photo.jpg",
+          title: "Los Angeles",
+          description:
+            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
+        },
+        {
+          image:
+            "https://mechtraveller.com/wp-content/uploads/Light-bridge-road-view.jpg",
+          title: "Mexico City",
+          description:
+            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
+        },
+        {
+          image:
+            "https://mechtraveller.com/wp-content/uploads/Light-bridge-road-view.jpg",
+          title: "San Marino",
+          description:
+            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables/size.scss";
-.section-one{
+.section-one {
   width: 100%;
   display: flex;
-  .section-one-text-container{
+  .section-one-text-container {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0 10px;
-    span{
+    span {
       font-size: $xx-large;
       color: var(--app-blue);
     }
   }
-  .section-one-image-container{
+  .section-one-image-container {
     width: 50%;
-    img{
+    img {
       width: 100%;
       height: 500px;
       border-radius: 50% 180px 50% 56px;
     }
   }
 }
- @media (max-width: 1000px) {
-    .section-one{
-      flex-direction: column;
-      .section-one-text-container{
-        width: 100%;
-        padding: 50px 0;
-      }
-      .section-one-image-container{
-        width: 100%;
-      }
+.section-two{}
+@media (max-width: 1000px) {
+  .section-one {
+    flex-direction: column;
+    .section-one-text-container {
+      width: 100%;
+      padding: 50px 0;
+    }
+    .section-one-image-container {
+      width: 100%;
     }
   }
+}
 </style>
