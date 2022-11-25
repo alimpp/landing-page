@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="mobile-nav d-flex" :class="{'open_menu': open}">
+    <div class="mobile-nav d-flex" :class="{ open_menu: open }">
       <div class="items-container">
         <div class="d-flex">
-          <span>{{ logo }}</span>
-          <changeMode class="mx-3" />
+          <span class="pt-1">{{ logo }}</span>
         </div>
         <router-link
           class="item"
+          @click="openMenu"
           v-for="item in items"
           :key="item.id"
           :to="item.path"
@@ -16,7 +16,9 @@
       </div>
 
       <div class="hambuger-container">
-        <i class="bi bi-list item application_pointer" @click="openMenu"></i>
+        <changeMode class="mx-2" />
+        <i class="bi bi-x-lg application_animation application_pointer" v-if="open" @click="openMenu"></i>
+        <i class="bi bi-filter-left item application_pointer application_animation" v-else @click="openMenu"></i>
       </div>
     </div>
   </div>
@@ -49,12 +51,12 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/variables/size.scss";
 .mobile-nav {
-  height: 40px;
-  padding: 10px 25px;
+  height: 45px;
   display: flex;
   overflow: hidden;
   transition: 1s;
   margin-bottom: 10px;
+  padding: 6px 18px;
   .items-container {
     width: 50%;
     display: flex;
@@ -70,7 +72,7 @@ export default {
       color: var(--app-drk);
       font-size: $medium;
       font-weight: 600;
-      padding: 10px 0;
+      padding: 15px 0;
     }
   }
   .hambuger-container {
@@ -78,11 +80,11 @@ export default {
     display: flex;
     justify-content: end;
     i {
-      font-size: $x-large;
+      font-size: $xx-large;
     }
   }
 }
 .open_menu {
-  height: 240px;
+  height: 260px;
 }
 </style>
