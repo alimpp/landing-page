@@ -1,7 +1,9 @@
 <template>
   <div class="app" :class="watchMode === 'dark' ? 'dark' : 'light'">
     <desktopNav class="desktop_nav" />
-    <mobileNav class="mobile_nav" />
+    <div class="mobile_nav">
+      <mobileNav />
+    </div>
     <div class="container">
       <router-view></router-view>
     </div>
