@@ -1,0 +1,10 @@
+@import './variables/themeColors.scss';
+@import './variables/size.scss';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.application_pointer{
+    cursor: pointer;
+}
