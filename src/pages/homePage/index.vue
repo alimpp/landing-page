@@ -82,7 +82,11 @@ export default {
     padding: 0 10px;
     span {
       font-size: $xx-large;
+      font-weight: 200;
       color: var(--app-blue);
+    }
+    p{
+      font-size: $small;
     }
   }
   .section-one-image-container {

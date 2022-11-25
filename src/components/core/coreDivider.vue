@@ -27,4 +27,9 @@ export default {
         font-weight: 600;
     }
 }
+@media (max-width: 900px) {
+    .core-divider{
+        width: 100%;
+    }
+}
 </style>
