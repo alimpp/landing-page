@@ -54,7 +54,7 @@ export default {
   height: 45px;
   display: flex;
   overflow: hidden;
-  transition: 1s;
+  transition: 0.5s;
   margin-bottom: 10px;
   padding: 6px 18px;
   .items-container {
