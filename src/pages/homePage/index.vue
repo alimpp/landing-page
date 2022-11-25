@@ -42,14 +42,14 @@ export default {
       itemsCard: [
         {
           image:
-            "https://static.vecteezy.com/system/resources/previews/007/792/440/large_2x/big-ben-london-the-uk-at-sunset-retro-street-lamp-light-on-westminster-bridge-black-and-white-photo.jpg",
+            "https://dkemhji6i1k0x.cloudfront.net/000_clients/138316/page/h800-1383161420pG8x.jpg",
           title: "Los Angeles",
           description:
             "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
         },
         {
           image:
-            "https://mechtraveller.com/wp-content/uploads/Light-bridge-road-view.jpg",
+            "https://img.freepik.com/premium-photo/light-painting-art-concept-long-exposure-shot-spinning-steel-wool-abstract-circle-making-firework-showers-bright-yellow-glowing-sparkles-long-bridge-blue-night-starry-sky_127089-7019.jpg?auto=format&h=200",
           title: "Mexico City",
           description:
             "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available",
