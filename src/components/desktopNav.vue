@@ -25,7 +25,7 @@ export default {
   components: { changeMode },
   data() {
     return {
-      logo: "Landing Page",
+      logo: "Landing",
       items: [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },

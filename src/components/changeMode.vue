@@ -1,7 +1,7 @@
 <template>
   <div class="change-mode-container">
-    <i @click="darkMode" class="bi bi-moon-stars application_pointer" v-if="watchMode === 'light'"></i>
-    <i @click="lightMode" class="bi bi-cloud-sun application_pointer" v-if="watchMode === 'dark'"></i>
+    <i @click="darkMode" class="bi bi-moon application_pointer" v-if="watchMode === 'light'"></i>
+    <i @click="lightMode" class="bi bi-brightness-high application_pointer" v-if="watchMode === 'dark'"></i>
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
 @import "@/assets/scss/variables/size.scss";
 .change-mode-container{
     i{
-        font-size: $x-large;
+        font-size: $xx-large;
     }
 }
 </style>
