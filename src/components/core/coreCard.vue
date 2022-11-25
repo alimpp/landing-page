@@ -3,7 +3,7 @@
     <img :src="image" alt="image" />
     <span>{{ title }}</span>
     <p>{{ description }}</p>
-    <div class="d-flex">
+    <div class="d-flex mb-3">
       <i class="bi bi-telegram"></i>
       <i class="bi bi-facebook"></i>
       <i class="bi bi-instagram"></i>

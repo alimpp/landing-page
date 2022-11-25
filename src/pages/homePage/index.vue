@@ -19,7 +19,8 @@
         />
       </div>
     </div>
-    <div class="section-two d-flex justify-content-center align-items-center">
+    <div class="section-two d-flex flex-column mt-5">
+      <coreDivider title="Get Started" />
       <div class="row">
         <div class="col-lg-4" v-for="item in itemsCard" :key="item.id">
           <coreCard
@@ -35,8 +36,9 @@
 
 <script>
 import coreCard from "@/components/core/coreCard";
+import coreDivider from "@/components/core/coreDivider";
 export default {
-  components: { coreCard },
+  components: { coreCard, coreDivider },
   data() {
     return {
       itemsCard: [
@@ -92,7 +94,8 @@ export default {
     }
   }
 }
-.section-two{}
+.section-two {
+}
 @media (max-width: 1000px) {
   .section-one {
     flex-direction: column;
