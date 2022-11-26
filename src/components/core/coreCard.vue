@@ -82,8 +82,5 @@ export default {
   p {
     color: var(--app-light);
   }
-//   i {
-//     color: var(--app-light);
-//   }
 }
 </style>
