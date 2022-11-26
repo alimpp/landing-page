@@ -10,7 +10,9 @@
           deleniti nihil ipsum debitis ullam?
         </p>
         <div>
-          <button class="btn btn-primary">Get Started</button>
+          <button class="btn btn-primary" @click="goToStarted">
+            Get Started
+          </button>
         </div>
       </div>
       <div class="section-one-image-container">
@@ -19,7 +21,7 @@
         />
       </div>
     </div>
-    <div class="section-two d-flex flex-column mt-5">
+    <div class="section-two d-flex flex-column mt-5" ref="started">
       <coreDivider title="Get Started" />
       <div class="row">
         <div class="col-lg-4" v-for="item in itemsCard" :key="item.id">
@@ -31,6 +33,33 @@
         </div>
       </div>
     </div>
+    <div class="section-three d-flex flex-column mt-5">
+      <coreDivider title="Business Plan" />
+      <div class="row">
+        <div class="col-lg-6 section-three-image-container">
+          <img
+            src="https://www.qschina.cn/sites/default/files/articles/lead-images/civil_engineering.jpg"
+            alt="image"
+          />
+        </div>
+        <div class="col-lg-6 section-three-text-container">
+          <span>Business Palning</span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
+            praesentium doloremque rerum, aspernatur vero tempore tenetur
+            architecto nisi quos animi facere blanditiis quis sequi, cupiditate
+            deleniti nihil ipsum debitis ullam? Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Ducimus praesentium doloremque rerum,
+            aspernatur vero tempore tenetur architecto nisi quos animi facere
+            blanditiis quis sequi, cupiditate deleniti nihil ipsum debitis
+            ullam? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Ducimus praesentium doloremque rerum, aspernatur vero tempore
+            tenetur architecto nisi quos animi facere blanditiis quis sequi,
+            cupiditate deleniti nihil ipsum debitis ullam?
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -39,6 +68,12 @@ import coreCard from "@/components/core/coreCard";
 import coreDivider from "@/components/core/coreDivider";
 export default {
   components: { coreCard, coreDivider },
+  methods: {
+    goToStarted() {
+      const elem = this.$refs.started;
+      elem.scrollIntoView();
+    },
+  },
   data() {
     return {
       itemsCard: [
@@ -85,7 +120,7 @@ export default {
       font-weight: 200;
       color: var(--app-blue);
     }
-    p{
+    p {
       font-size: $small;
     }
   }
@@ -95,6 +130,30 @@ export default {
       width: 100%;
       height: 500px;
       border-radius: 50% 180px 50% 56px;
+    }
+  }
+}
+.section-three {
+  .section-three-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    span {
+      font-size: $xx-large;
+      font-weight: 200;
+      color: var(--app-blue);
+    }
+    p {
+      font-size: $small;
+    }
+  }
+  .section-three-image-container {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
     }
   }
 }
