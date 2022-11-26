@@ -8,3 +8,10 @@
 .application_pointer{
     cursor: pointer;
 }
+.application_animation{
+    animation: 1s application_animation ;
+}
+@keyframes application_animation {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}

@@ -1,6 +1,9 @@
 <template>
   <div class="app" :class="watchMode === 'dark' ? 'dark' : 'light'">
-    <desktopNav />
+    <desktopNav class="desktop_nav" />
+    <div class="mobile_nav">
+      <mobileNav />
+    </div>
     <div class="container">
       <router-view></router-view>
     </div>
@@ -9,13 +12,14 @@
 
 <script>
 import desktopNav from "@/components/desktopNav";
+import mobileNav from "@/components/mobileNav";
 export default {
   computed: {
     watchMode() {
       return this.$store.getters["theme/watchMode"];
     },
   },
-  components: { desktopNav },
+  components: { desktopNav, mobileNav },
 };
 </script>
 
@@ -23,7 +27,17 @@ export default {
 @import "@/assets/scss/variables/size.scss";
 .app {
   width: 100%;
-  height: 100vh;
+  .mobile_nav{
+    display: none;
+  }
+  @media (max-width: 1032px) {
+    .desktop_nav{
+      display: none;
+    }
+    .mobile_nav{
+      display: block;
+    }
+  }
 }
 .light {
   transition: 1s;
