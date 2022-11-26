@@ -57,6 +57,13 @@
             tenetur architecto nisi quos animi facere blanditiis quis sequi,
             cupiditate deleniti nihil ipsum debitis ullam?
           </p>
+          <div class="d-flex mb-3">
+            <i class="bi bi-telegram"></i>
+            <i class="bi bi-facebook px-2"></i>
+            <i class="bi bi-instagram px-2"></i>
+            <i class="bi bi-twitter px-2"></i>
+            <i class="bi bi-twitch px-2"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -145,6 +152,9 @@ export default {
     }
     p {
       font-size: $small;
+    }
+    i{
+      font-size: $x-large;
     }
   }
   .section-three-image-container {
