@@ -1,5 +1,5 @@
 <template>
-  <div class="about-page">
+  <div class="about-page application_animation">
     <div class="row">
       <div class="col-lg-6 image-container">
         <img
