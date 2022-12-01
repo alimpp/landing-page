@@ -1,6 +1,6 @@
 <template>
   <div
-    class="core-card"
+    class="core-card application_pointer"
     :class="watchMode === 'dark' ? 'core-card-dark' : 'core-card-light'"
   >
     <img :src="image" alt="image" />
@@ -49,6 +49,7 @@ export default {
   flex-direction: column;
   overflow: hidden;
   margin: 10px 2px;
+  transition: 0.5s;
   img {
     width: 100%;
     height: 300px;
@@ -77,7 +78,7 @@ export default {
 .core-card-dark {
   background: var(--app-card-in-dark-mode);
   span {
-    color: var(--app-light);
+    color: var(--app-blue);
   }
   p {
     color: var(--app-light);
