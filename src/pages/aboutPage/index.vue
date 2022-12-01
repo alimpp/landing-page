@@ -100,4 +100,7 @@ export default {
     border-radius: 90px 100px 250px 100px;
   }
 }
+.col-lg-6{
+  font-size: $small;
+}
 </style>
