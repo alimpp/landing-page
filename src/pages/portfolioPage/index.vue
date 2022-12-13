@@ -3,7 +3,7 @@
     <coreDivider title="Portfolio" />
     <div class="row">
       <div class="col-lg-3" v-for="data in dataSource" :key="data.id">
-        <router-link class="application_link" :to="`/projects/${data.id}`">
+        <router-link class="application_link" :to="`/portfolio/${data.id}`">
           <coreCard :title="data.title" :image="data.image" :description="data.description" />
         </router-link>
       </div>
