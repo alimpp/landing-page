@@ -67,7 +67,7 @@ export default {
     display: flex;
     align-items: center;
     .line-conatiner{
-        border: 1px solid var(--app-gray);
+        border-left: 1px solid var(--app-gray);
         width: 1px;
         padding: 30px 0;
         margin: 10px 23px;
