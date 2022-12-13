@@ -7,19 +7,21 @@
     <div class="container">
       <router-view></router-view>
     </div>
+    <applicationFooter />
   </div>
 </template>
 
 <script>
 import desktopNav from "@/components/desktopNav";
 import mobileNav from "@/components/mobileNav";
+import applicationFooter from "@/components/applicationFooter";
 export default {
   computed: {
     watchMode() {
       return this.$store.getters["theme/watchMode"];
     },
   },
-  components: { desktopNav, mobileNav },
+  components: { desktopNav, mobileNav, applicationFooter },
 };
 </script>
 
@@ -27,14 +29,14 @@ export default {
 @import "@/assets/scss/variables/size.scss";
 .app {
   width: 100%;
-  .mobile_nav{
+  .mobile_nav {
     display: none;
   }
   @media (max-width: 1032px) {
-    .desktop_nav{
+    .desktop_nav {
       display: none;
     }
-    .mobile_nav{
+    .mobile_nav {
       display: block;
     }
   }
