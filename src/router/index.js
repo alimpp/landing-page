@@ -22,7 +22,7 @@ const routes = [
     component : () => import('@/pages/portfolioPage/index.vue')
   } ,
   {
-    path : '/projects/:id' , 
+    path : '/portfolio/:id' , 
     name : 'projects' , 
     component : () => import('@/pages/detailProjects/index.vue')
   } ,
